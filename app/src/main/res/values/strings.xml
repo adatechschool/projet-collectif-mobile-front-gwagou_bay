@@ -1,9 +1,75 @@
 <resources>
-    <string name="app_name">Gwagou_bay</string>
+    <string name="app_name">Gwagoù Bay</string>
+    <string name="user_greetings">Hi, user</string>
+    <string name="user_greetings_subtitle">Enjoy your surfing</string>
+
+    <!-- Page d'accueil -->
+    <string name="home_page_title">Popular spots</string>
+
+    <!-- Détails d'un spot -->
+    <string name="spot_name">Spot name</string>
+    <string name="spot_city">City</string>
+    <string name="spot_gps_coordinates">GPS coordinates</string>
+    <string name="spot_address">Address</string>
+    <string name="spot_additional_informations">Additional information</string>
+    <string name="gwagou_types">Waves type</string>
+    <string name="peak_surf_season_start">Peak surf season start</string>
+    <string name="peak_surf_season_end">Peak surf season end</string>
+
+    <!-- Ajout d'un spot -->
+    <string name="add_spot_page_title">Add a new spot</string>
+    <string name="add_spot_name_input">@string/spot_name</string>
+    <string name="add_spot_city_input">@string/spot_city</string>
+    <string name="add_spot_gps_coordinates_input">@string/spot_gps_coordinates</string>
+    <string name="add_spot_address_input">@string/spot_address</string>
+    <string name="add_spot_additional_informations_input">@string/spot_additional_informations</string>
+
+    <string-array name="add_gwagou_types_input">
+        <item>Waves: Beach breaks</item>
+        <item>Waves: Crumbly waves</item>
+        <item>Waves: Point breaks</item>
+        <item>Waves: Reef breaks</item>
+        <item>Waves: Reform waves</item>
+        <item>Waves: River mouth waves</item>
+        <item>Waves: Double-up waves</item>
+    </string-array>
+
+    <string-array name="add_peak_surf_season_start_input">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="add_peak_surf_season_end_input">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+
+
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+
+    <!-- <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string> -->
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -12,5 +78,6 @@
     </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>
