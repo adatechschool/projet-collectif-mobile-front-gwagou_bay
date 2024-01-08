@@ -58,14 +58,12 @@ class SpotInformationFragment : Fragment() {
     }
 }
 
-/*
-class Spot constructor (val nom: String, val lieu: String, val image: String) {
-    init{
-        println("Venez à $nom")
-    }
-}
-fun main(){
-    // pas besoin de mettre New pour créer une nouvelle instance de l'objet, contrairement à Java ou JS
-    val spot = Spot("Capbreton", "Nouvelle-Aquitaine", "imagedevaguesterrifiantes")
-}
- */
+//class Spot constructor (val nom: String, val lieu: String, val image: String) {
+//    init{
+//        println("Venez à $nom")
+//    }
+//}
+//fun main(){
+//    // pas besoin de mettre New pour créer une nouvelle instance de l'objet, contrairement à Java ou JS
+//    val spot = Spot("Capbreton", "Nouvelle-Aquitaine", "imagedevaguesterrifiantes")
+//}

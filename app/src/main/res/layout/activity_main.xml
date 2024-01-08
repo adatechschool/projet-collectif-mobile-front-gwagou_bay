@@ -30,4 +30,13 @@
         android:layout_marginBottom="16dp"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.gwagou_bay.SpotInformationFragment"
+        tools:ignore="MissingClass" /> <!--  a supprimer ?? -->
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
