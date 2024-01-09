@@ -15,6 +15,7 @@
         app:cardBackgroundColor="@color/beige">
 
         <ImageView
+            android:id="@+id/spot_view"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:scaleType="centerCrop"
@@ -23,10 +24,10 @@
     </androidx.cardview.widget.CardView>
 
     <View
-        android:id="@+id/view_separation_vertical"
+        android:id="@+id/view_separation_vertical_left"
         android:layout_width="1dp"
         android:layout_height="match_parent"
-        android:background="@color/blue"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,28 +37,48 @@
         android:id="@+id/view_separation_horizontal"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/blue"
+        android:visibility="invisible"
         app:layout_constraintVertical_bias="0.23"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteY="0dp" />
 
+    <View
+        android:id="@+id/view_separation_vertical_right"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/spot_name_item"
         style="@style/DefaultTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/spot_name"
-        app:layout_constraintStart_toEndOf="@+id/view_separation_vertical"
-        app:layout_constraintTop_toBottomOf="@+id/view_separation_horizontal" />
+        app:layout_constraintStart_toEndOf="@+id/view_separation_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/view_separation_horizontal"
+        android:layout_marginBottom="@dimen/item_margin"/>
 
     <TextView
+        android:id="@+id/spot_city_item"
         style="@style/DefaultTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/spot_city"
-        app:layout_constraintStart_toEndOf="@+id/view_separation_vertical"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toEndOf="@+id/view_separation_vertical_left"
+        app:layout_constraintTop_toBottomOf="@+id/spot_name_item" />
+
+    <ImageView
+        android:id="@+id/heart_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_heart"
+        app:layout_constraintTop_toBottomOf="@+id/view_separation_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/view_separation_vertical_right" />
 
     <!--    <TextView-->
 <!--        style="@style/DefaultTextStyle"-->
