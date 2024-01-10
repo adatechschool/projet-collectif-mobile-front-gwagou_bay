@@ -20,7 +20,7 @@
 
     <!-- Creer le composant titre par défaut -->
     <style name='TitleStyle' parent='SubtitleStyle'>
-        <item name="android:textSize">16sp</item>
-    <!-- <item name="android:fontWeight">700</item>  // font weight WIP-->
+        <item name="android:textSize">20sp</item>
+            <!-- <item name="android:fontWeight">700</item>  // font weight WIP-->
     </style>
 </resources>

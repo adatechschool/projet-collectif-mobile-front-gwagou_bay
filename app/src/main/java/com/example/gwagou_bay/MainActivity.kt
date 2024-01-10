@@ -11,6 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.gwagou_bay.databinding.ActivityMainBinding
 import com.example.gwagou_bay.fragments.HomeFragment
+import com.example.gwagou_bay.fragments.SpotDetailsFragment
 
 class MainActivity : AppCompatActivity() {
 //private lateinit var appBarConfiguration: AppBarConfiguration
