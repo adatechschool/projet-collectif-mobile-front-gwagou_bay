@@ -26,7 +26,22 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.fragment_container, HomeFragment()) // ici on remplace l'élément de gauche, par celui de droite (ici HomeFragment())
         transaction.addToBackStack(null) // permet de ne pas avoir de retour sur ce composant
         transaction.commit() // envoie les changements
+
+        spotsRecords()
     }
+
+ fun spotsRecords ()   {val spotsList = mutableMapOf(
+        "spotOne" to mutableMapOf(
+            "Surf Break" to "Reef Break",
+            "Photos" to  "https://dl.airtable.com/ZuXJZ2NnTF40kCdBfTld_thomas-ashlock-64485-unsplash.jpg",
+            "Address" to "Pipeline, Oahu, Hawaii"),
+        "spotTwo" to mutableMapOf (
+            "Surf Break" to "Point Break",
+            "Photos" to "https://dl.airtable.com/e3QoP3cFSyykZJOvWGIy_cesar-couto-477018-unsplash%20(1).jpg",
+            "Address" to "Supertubes, Jeffreys Bay, South Africa")
+    )
+
+    println(spotsList["spotOne"])}
 
 
 //    override fun onCreateOptionsMenu(menu: Menu): Boolean {
