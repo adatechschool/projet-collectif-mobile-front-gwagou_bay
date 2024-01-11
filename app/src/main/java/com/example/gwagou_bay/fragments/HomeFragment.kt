@@ -37,9 +37,11 @@ class HomeFragment (private val context : MainActivity) : Fragment() {
         // 2ieme spot pour test
         spotList.add(SpotModel())
 
+        println(spotList)
 
         // inflate injecte le layout du fragment    -    le ? permet d'afficher même si il n'y a pas de fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
+
         //récupérer le recyclerview
         val verticalRecyclerView = view?.findViewById<RecyclerView>(R.id.vertical_recycler_view)
         verticalRecyclerView?.adapter = SpotAdapter(context, spotList, R.layout.item_vertical_popular_spot)
