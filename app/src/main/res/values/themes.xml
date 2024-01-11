@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Gwagou_bay" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
+        <item name="android:windowBackground">@color/broken_white</item>
     </style>
 
     <style name="Theme.Gwagou_bay" parent="Base.Theme.Gwagou_bay" />
@@ -9,18 +10,20 @@
     <!-- Creer le composant text par défaut -->
     <style name='DefaultTextStyle'>
         <item name="android:textColor">@color/blue</item>
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:fontFamily">Arial</item>
     </style>
 
     <!-- Creer le composant sous-titre par défaut -->
     <style name='SubtitleStyle' parent='DefaultTextStyle'>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">19sp</item>
     </style>
 
     <!-- Creer le composant titre par défaut -->
     <style name='TitleStyle' parent='SubtitleStyle'>
-        <item name="android:textSize">16sp</item>
-    <!-- <item name="android:fontWeight">700</item>  // font weight WIP-->
+        <item name="android:textSize">22sp</item>
+            <!-- <item name="android:fontWeight">700</item>  // font weight WIP-->
     </style>
+
+
 </resources>

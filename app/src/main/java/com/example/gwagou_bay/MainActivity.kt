@@ -11,6 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.gwagou_bay.databinding.ActivityMainBinding
 import com.example.gwagou_bay.fragments.HomeFragment
+import com.example.gwagou_bay.fragments.SpotDetailsFragment
 
 class MainActivity : AppCompatActivity() {
 //private lateinit var appBarConfiguration: AppBarConfiguration
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         // injecter le fragment dans notre boîte (fragment_container)
         val transaction = supportFragmentManager.beginTransaction() // permet de stocker une valeur (qui ne changera pas) ; support fragment manager (permet de gérer les fragments sur android) ; .begintransaction => commence série d'opération pour gérer les fragments
-        transaction.replace(R.id.fragment_container, HomeFragment()) // ici on remplace l'élément de gauche, par celui de droite (ici HomeFragment())
+        transaction.replace(R.id.fragment_container, SpotDetailsFragment(context=this)) // ici on remplace l'élément de gauche, par celui de droite (ici HomeFragment())
         transaction.addToBackStack(null) // permet de ne pas avoir de retour sur ce composant
         transaction.commit() // envoie les changements
     }
