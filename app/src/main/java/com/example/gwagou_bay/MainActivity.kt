@@ -16,7 +16,10 @@ import com.example.gwagou_bay.fragments.SpotDetailsFragment
 import java.io.IOException;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
+import okhttp3.Response
+
+import org.json.JSONObject
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +44,8 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    //function pour appel API qui retourne les datas au format json
     private fun makeGetRequest() {
         // Create an OkHttpClient instance
         val client = OkHttpClient()
@@ -67,18 +72,37 @@ class MainActivity : AppCompatActivity() {
 
             override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
                 // Handle successful response
+
                 val responseData = response.body?.string()
+
                 runOnUiThread {
                     // Update UI or perform other tasks with the response data
                     println(responseData)
+//                    if (responseData != null) {
+//                        parseJSON(responseData)
+//                    }
                 }
+
 
                 // Close the response body
                 response.close()
             }
         })
     }
+    // Create the function which can parse the
+    fun parseJSON(jsonString: String) {
+        // Create a JSONObject and pass the json string
+        val jsonObject = JSONObject(jsonString)
 
+        val id = jsonObject.getString("id")
+        val destination = jsonObject.getString("Destination")
+        val geocode = jsonObject.getString("geocode")
+
+
+        // Use the extracted values and print them
+        println("id: $id")
+        println("destination: $destination")
+        println("geocode: $geocode")}
 }
 
 
