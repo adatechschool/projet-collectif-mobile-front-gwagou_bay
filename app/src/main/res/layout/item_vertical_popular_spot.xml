@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    >
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="230dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="0dp"
-        app:cardBackgroundColor="@color/beige">
-
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/beige"
+        app:cardCornerRadius="20dp">
+        <!--app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <ImageView
             android:id="@+id/spot_view"
             android:layout_width="match_parent"
@@ -21,9 +25,8 @@
             android:scaleType="centerCrop"
             android:src="@drawable/capbreton" />
 
-    </androidx.cardview.widget.CardView>
 
-    <View
+    <!-- <View
         android:id="@+id/view_separation_vertical_left"
         android:layout_width="1dp"
         android:layout_height="match_parent"
@@ -51,42 +54,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="0dp" /> -->
+
+
+        <!--app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"-->
+
+        <TextView
+            android:id="@+id/spot_name_item"
+            style="@style/DefaultTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_margin"
+            android:text="@string/spot_name"
+            android:layout_marginBottom="@dimen/item_margin"/>
+            <!--app:layout_constraintStart_toEndOf="@+id/view_separation_vertical_left"
+app:layout_constraintTop_toBottomOf="@+id/view_separation_horizontal"-->
 
     <TextView
-        android:id="@+id/spot_name_item"
-        style="@style/DefaultTextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/spot_name"
-        app:layout_constraintStart_toEndOf="@+id/view_separation_vertical_left"
-        app:layout_constraintTop_toBottomOf="@+id/view_separation_horizontal"
-        android:layout_marginBottom="@dimen/item_margin"/>
+            android:id="@+id/spot_city_item"
+            style="@style/DefaultTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_margin"
+            android:text="@string/spot_city" />
+            <!--app:layout_constraintStart_toEndOf="@+id/view_separation_vertical_left"
+       app:layout_constraintTop_toBottomOf="@+id/spot_name_item"-->
 
-    <TextView
-        android:id="@+id/spot_city_item"
-        style="@style/DefaultTextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/spot_city"
-        app:layout_constraintStart_toEndOf="@+id/view_separation_vertical_left"
-        app:layout_constraintTop_toBottomOf="@+id/spot_name_item" />
-
-    <ImageView
-        android:id="@+id/heart_icon"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/ic_heart"
-        app:layout_constraintTop_toBottomOf="@+id/view_separation_horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/view_separation_vertical_right" />
-
-    <!--    <TextView-->
-<!--        style="@style/DefaultTextStyle"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/spot_des"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/view_separation_vertical"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/view_separation_horizontal" />-->
+            <ImageView
+                android:id="@+id/heart_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="@dimen/item_margin"
+                android:src="@drawable/ic_heart" />
+            <!--app:layout_constraintTop_toBottomOf="@+id/view_separation_horizontal"
+       app:layout_constraintEnd_toEndOf="@+id/view_separation_vertical_right"-->
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
