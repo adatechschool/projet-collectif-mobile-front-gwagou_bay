@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/default_margin">
+
+    <TextView
+        android:id="@+id/add_spot_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/item_margin"
+        android:text="@string/add_spot_page_title"
+        style="@style/TitleStyle"
+        android:textFontWeight="700"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:background="@color/beige"
+        android:layout_margin="@dimen/item_margin">
+
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_spot_name_input"
+            android:paddingLeft="@dimen/default_margin"
+            android:background="@color/beige"
+            style="@style/DefaultTextStyle"
+        />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:background="@color/beige"
+        android:layout_margin="@dimen/item_margin">
+
+        <EditText
+            android:id="@+id/city_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_spot_city_input"
+            android:paddingLeft="@dimen/default_margin"
+            android:background="@color/beige"
+            style="@style/DefaultTextStyle"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:background="@color/beige"
+        android:layout_margin="@dimen/item_margin">
+
+        <EditText
+            android:id="@+id/gps_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_spot_gps_coordinates_input"
+            android:paddingLeft="@dimen/default_margin"
+            style="@style/DefaultTextStyle"
+            android:background="@color/beige"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:background="@color/beige"
+        android:layout_margin="@dimen/item_margin">
+
+        <EditText
+            android:id="@+id/address_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_spot_address_input"
+            android:paddingLeft="@dimen/default_margin"
+            style="@style/DefaultTextStyle"
+            android:background="@color/beige"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:background="@color/beige"
+        android:layout_margin="@dimen/item_margin">
+
+        <EditText
+            android:id="@+id/infos_input"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:hint="@string/spot_additional_informations"
+            android:paddingLeft="@dimen/default_margin"
+            style="@style/DefaultTextStyle"
+            android:background="@color/beige"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:background="@color/beige"
+        android:layout_margin="@dimen/item_margin">
+
+        <Spinner
+            android:id="@+id/types_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/item_margin"
+            android:entries="@array/add_gwagou_types_input"
+            android:background="@color/beige"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:background="@color/beige"
+        android:layout_margin="@dimen/item_margin">
+
+        <Spinner
+            android:id="@+id/peak_start_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/item_margin"
+            android:entries="@array/add_peak_surf_season_start_input"
+            android:background="@color/beige"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:background="@color/beige"
+        android:layout_margin="@dimen/item_margin">
+
+        <Spinner
+            android:id="@+id/peak_end_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/item_margin"
+            android:entries="@array/add_peak_surf_season_end_input"
+            android:background="@color/beige"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:text="@string/add_confirm"
+        android:textSize="18dp"
+        android:layout_gravity="center"
+        style="@style/ButtonStyle"/>
+
+
+
+
+
+</LinearLayout>
