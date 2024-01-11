@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Gwagou_bay" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Gwagou_bay" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="android:windowBackground">@color/broken_white</item>
-<!--        <item name="android:button">@style/ButtonStyle</item>-->
+       <item name="android:button">@style/ButtonStyle</item>
 
 
     </style>
@@ -34,5 +34,16 @@
 
     </style>
 
+    <style name="BottomNavigationStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">Arial</item>
+        <item name="android:textColor">@color/broken_white</item>
+    </style>
+
+    <style name="BottomNavigationTheme" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">Arial</item>
+        <item name="android:textColor">@color/broken_white</item>
+    </style>
 
 </resources>

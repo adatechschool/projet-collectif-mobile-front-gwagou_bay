@@ -3,6 +3,11 @@
     <string name="user_greetings">Hi, user</string>
     <string name="user_greetings_subtitle">Enjoy your surfing</string>
 
+    <string name="bottom_search_item">Search</string>
+    <string name="bottom_favorites_item">Favorites</string>
+    <string name="bottom_add_spot_item">Add a new spot</string>
+    <string name="bottom_settings_item">Settings</string>
+
     <!-- Page d'accueil -->
     <string name="home_page_title">Popular spots</string>
 

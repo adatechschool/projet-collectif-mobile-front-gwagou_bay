@@ -163,7 +163,7 @@
         android:text="@string/add_confirm"
         android:textSize="18dp"
         android:layout_gravity="center"
-        style="@style/ButtonStyle"/>
+        android:theme="@style/ButtonStyle"/>
 
 
 
