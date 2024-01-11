@@ -24,8 +24,8 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="280dp"
+        android:layout_height="190dp"
         android:layout_gravity="center"
         android:layout_margin="@dimen/item_margin"
         app:cardCornerRadius="20dp"
@@ -33,7 +33,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
             android:src="@drawable/capbreton"/>
 
     </androidx.cardview.widget.CardView>
