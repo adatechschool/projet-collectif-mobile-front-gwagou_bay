@@ -1,4 +1,3 @@
-
 package com.example.gwagou_bay
 
 import android.os.Bundle
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loadFragment(HomeFragment())
+        loadFragment(HomeFragment(this))
 
 //        binding = ActivityMainBinding.inflate(layoutInflater)
         //import de la navbar

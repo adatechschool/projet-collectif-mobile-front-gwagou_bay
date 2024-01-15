@@ -1,4 +1,3 @@
-
 package com.example.gwagou_bay.adapter
 
 import android.net.Uri
