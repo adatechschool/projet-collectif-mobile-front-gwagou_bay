@@ -1,3 +1,4 @@
+
 package com.example.gwagou_bay.fragments
 
 import android.os.Bundle
@@ -15,7 +16,9 @@ import com.example.gwagou_bay.adapter.SpotAdapter
 class HomeFragment (private val context : MainActivity) : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
+        
+      
+        
         //créer une liste qui va stocker les spots
         val spotList = arrayListOf<SpotModel>()
 

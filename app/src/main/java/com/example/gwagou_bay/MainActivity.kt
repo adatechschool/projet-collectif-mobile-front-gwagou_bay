@@ -1,3 +1,4 @@
+
 package com.example.gwagou_bay
 
 import android.os.Bundle
@@ -9,9 +10,14 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.example.gwagou_bay.databinding.ActivityMainBinding
+import com.example.gwagou_bay.fragments.AddSpotFragment
 import com.example.gwagou_bay.fragments.HomeFragment
 import com.example.gwagou_bay.fragments.SpotDetailsFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
 
 class MainActivity : AppCompatActivity() {
 //private lateinit var appBarConfiguration: AppBarConfiguration
@@ -20,29 +26,42 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        loadFragment(HomeFragment())
+
 //        binding = ActivityMainBinding.inflate(layoutInflater)
+        //import de la navbar
+        val navigationView = findViewById<BottomNavigationView>(R.id.navigation_view)
+        navigationView.setOnItemSelectedListener{
+            when(it.itemId)
+            {
+                R.id.add_spot_page -> {
+                    loadFragment(AddSpotFragment(this))
+                    return@setOnItemSelectedListener true
+                }
+                R.id.settings_page -> {
+                    loadFragment(SpotDetailsFragment(this))
+                    return@setOnItemSelectedListener true
+                }
+
+                else -> false
+            }
+        }
+
+
+    }
+
+    private fun loadFragment(fragment: Fragment) {
+
+
 
         // injecter le fragment dans notre boîte (fragment_container)
         val transaction = supportFragmentManager.beginTransaction() // permet de stocker une valeur (qui ne changera pas) ; support fragment manager (permet de gérer les fragments sur android) ; .begintransaction => commence série d'opération pour gérer les fragments
-        transaction.replace(R.id.fragment_container, HomeFragment(this)) // ici on remplace l'élément de gauche, par celui de droite (ici HomeFragment())
+        transaction.replace(R.id.fragment_container, fragment) // ici on remplace l'élément de gauche, par celui de droite (ici HomeFragment())
         transaction.addToBackStack(null) // permet de ne pas avoir de retour sur ce composant
         transaction.commit() // envoie les changements
 
-//        spotsRecords()
     }
-
- fun spotsRecords ()   {val spotsList = mutableMapOf(
-        "spotOne" to mutableMapOf(
-            "Surf Break" to "Reef Break",
-            "Photos" to  "https://dl.airtable.com/ZuXJZ2NnTF40kCdBfTld_thomas-ashlock-64485-unsplash.jpg",
-            "Address" to "Pipeline, Oahu, Hawaii"),
-        "spotTwo" to mutableMapOf (
-            "Surf Break" to "Point Break",
-            "Photos" to "https://dl.airtable.com/e3QoP3cFSyykZJOvWGIy_cesar-couto-477018-unsplash%20(1).jpg",
-            "Address" to "Supertubes, Jeffreys Bay, South Africa")
-    )
-
-    println(spotsList["spotOne"])}
 
 
 //    override fun onCreateOptionsMenu(menu: Menu): Boolean {
