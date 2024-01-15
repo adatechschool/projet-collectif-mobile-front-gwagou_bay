@@ -78,9 +78,9 @@ class MainActivity : AppCompatActivity() {
                 runOnUiThread {
                     // Update UI or perform other tasks with the response data
                     println(responseData)
-//                    if (responseData != null) {
-//                        parseJSON(responseData)
-//                    }
+                    if (responseData != null) {
+                        parseJSON(responseData)
+                    }
                 }
 
 
@@ -93,16 +93,24 @@ class MainActivity : AppCompatActivity() {
     fun parseJSON(jsonString: String) {
         // Create a JSONObject and pass the json string
         val jsonObject = JSONObject(jsonString)
+        val jsonArray = jsonObject.getJSONArray("records")
+        println(jsonArray[0])
+        println(jsonArray[1])
+        //WIP
 
-        val id = jsonObject.getString("id")
-        val destination = jsonObject.getString("Destination")
-        val geocode = jsonObject.getString("geocode")
-
-
-        // Use the extracted values and print them
-        println("id: $id")
-        println("destination: $destination")
-        println("geocode: $geocode")}
+        for (spot in 0 until jsonArray.length()) {
+            print(spot)
+//            val id = spot.getString("id")
+//            val destination = jsonObject.getString("Destination")
+//            val geocode = jsonObject.getString("geocode")
+//
+//
+//            // Use the extracted values and print them
+//            println("id: $id")
+//            println("destination: $destination")
+//            println("geocode: $geocode")
+        }
+    }
 }
 
 
