@@ -59,5 +59,4 @@ class SpotAdapter (
             holder.heartIcon.setImageResource(R.drawable.ic_unlike)
         }
     }
-
 }

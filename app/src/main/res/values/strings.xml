@@ -3,6 +3,11 @@
     <string name="user_greetings">Hi, user</string>
     <string name="user_greetings_subtitle">Enjoy your surfing</string>
 
+    <string name="bottom_search_item">Search</string>
+    <string name="bottom_favorites_item">Favorites</string>
+    <string name="bottom_add_spot_item">Add a new spot</string>
+    <string name="bottom_settings_item">Settings</string>
+
     <!-- Page d'accueil -->
     <string name="home_page_title">Popular spots</string>
 
@@ -25,16 +30,18 @@
     <string name="add_spot_additional_informations_input">@string/spot_additional_informations</string>
 
     <string-array name="add_gwagou_types_input">
-        <item>Waves: Beach breaks</item>
-        <item>Waves: Crumbly waves</item>
-        <item>Waves: Point breaks</item>
-        <item>Waves: Reef breaks</item>
-        <item>Waves: Reform waves</item>
-        <item>Waves: River mouth waves</item>
-        <item>Waves: Double-up waves</item>
+        <item>Waves types</item>
+        <item>Beach breaks</item>
+        <item>Crumbly waves</item>
+        <item>Point breaks</item>
+        <item>Reef breaks</item>
+        <item>Reform waves</item>
+        <item>River mouth waves</item>
+        <item>Double-up waves</item>
     </string-array>
 
     <string-array name="add_peak_surf_season_start_input">
+        <item>Peak surf season start</item>
         <item>January</item>
         <item>February</item>
         <item>March</item>
@@ -50,6 +57,7 @@
     </string-array>
 
     <string-array name="add_peak_surf_season_end_input">
+        <item>Peak surf season end</item>
         <item>January</item>
         <item>February</item>
         <item>March</item>
@@ -63,6 +71,8 @@
         <item>November</item>
         <item>December</item>
     </string-array>
+
+    <string name="add_confirm">Send</string>
 
 
 
