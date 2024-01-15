@@ -24,6 +24,7 @@ class SpotAdapter (
         val spotImage = view.findViewById<ImageView>(R.id.spot_view)
         val spotName:TextView? = view.findViewById(R.id.spot_name_item)
         val cityName:TextView? = view.findViewById(R.id.spot_city_item)
+        val heartIcon = view.findViewById<ImageView>(R.id.heart_icon)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -42,7 +43,8 @@ class SpotAdapter (
         val currentSpot = spotList[position]
 
         //utilise Glide pour récupérer l'image à partir de son url pour avoir l'affichage sur le composant
-        Glide.with(context).load(Uri.parse(currentSpot.imageUrl)).into(holder.spotImage) // pour mettre le contexte (base de données interne qui contient toutes les infos contextuelles de l'app comme le num de version, les infos spécifique de l'activité)
+        Glide.with(context).load(Uri.parse(currentSpot.imageUrl))
+            .into(holder.spotImage) // pour mettre le contexte (base de données interne qui contient toutes les infos contextuelles de l'app comme le num de version, les infos spécifique de l'activité)
 
         // mettre à jour le nom du spot
         holder.spotName?.text = currentSpot.spotName
@@ -50,7 +52,11 @@ class SpotAdapter (
         // mettre à jour le nom de la ville du spot
         holder.cityName?.text = currentSpot.spotCity
 
+        // vérifier si la plante a été likée ou non
+        if (currentSpot.liked) {
+            holder.heartIcon.setImageResource(R.drawable.ic_heart)
+        } else {
+            holder.heartIcon.setImageResource(R.drawable.ic_unlike)
+        }
     }
-
-
 }
