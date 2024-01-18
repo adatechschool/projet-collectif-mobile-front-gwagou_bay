@@ -75,36 +75,38 @@ class MainActivity : AppCompatActivity() {
         val client = OkHttpClient()
 
         // Replace the URL with the desired endpoint
-        val url = "https://api.airtable.com/v0/apptEhqmwsc6jfuFF/Surf%20Destinations"
-
-
+        // ancienne url pour l'api airtable :
+        // val url = "https://api.airtable.com/v0/apptEhqmwsc6jfuFF/Surf%20Destinations"
+        val url = "http://10.0.2.2:8080/spots"
+        println("--------------hello")
         // Create a request using the GET method
         val request = Request.Builder()
             .url(url)
-            .addHeader("Authorization", "Bearer patFMjbuBugC4G7A9.4454f5c043b6529a54444d7971322e5303cbb8747b789545274aef5665eb016b")
-            .addHeader("Cookie", "brw=brw2kYa4jmxqyLpd8; AWSALB=U26ouxw7j4ohFlExmNudgtGDG0bN6eC483Q2k5nSShiBWxRhFnxsw4NJi37lttLMGRR/b/As4XMsQuipbnIScu09XkTE1Fay8tDgCV8Z/vXJdwmb6gM3BYoOGDN4; AWSALBCORS=U26ouxw7j4ohFlExmNudgtGDG0bN6eC483Q2k5nSShiBWxRhFnxsw4NJi37lttLMGRR/b/As4XMsQuipbnIScu09XkTE1Fay8tDgCV8Z/vXJdwmb6gM3BYoOGDN4")
             .get()
             .build()
+        //.addHeader("Authorization", "Bearer patFMjbuBugC4G7A9.4454f5c043b6529a54444d7971322e5303cbb8747b789545274aef5665eb016b")
+        //.addHeader("Cookie", "brw=brw2kYa4jmxqyLpd8; AWSALB=U26ouxw7j4ohFlExmNudgtGDG0bN6eC483Q2k5nSShiBWxRhFnxsw4NJi37lttLMGRR/b/As4XMsQuipbnIScu09XkTE1Fay8tDgCV8Z/vXJdwmb6gM3BYoOGDN4; AWSALBCORS=U26ouxw7j4ohFlExmNudgtGDG0bN6eC483Q2k5nSShiBWxRhFnxsw4NJi37lttLMGRR/b/As4XMsQuipbnIScu09XkTE1Fay8tDgCV8Z/vXJdwmb6gM3BYoOGDN4")
 
 
         // Execute the request and handle the response asynchronously
         client.newCall(request).enqueue(object : okhttp3.Callback {
             override fun onFailure(call: okhttp3.Call, e: IOException) {
                 // Handle failure
+                println("------non")
                 e.printStackTrace()
             }
 
             override fun onResponse(call: okhttp3.Call, response: okhttp3.Response) {
                 // Handle successful response
 
-                val responseData = response.body?.string()
-
+                val responseData = response.body.string()
+                println("coucou")
                 runOnUiThread {
                     // Update UI or perform other tasks with the response data
                     println(responseData)
-                    if (responseData != null) {
-                        parseJSON(responseData)
-                    }
+                    // if (responseData != null) {
+                       // parseJSON(responseData)
+                    // }
                 }
 
 
@@ -114,16 +116,16 @@ class MainActivity : AppCompatActivity() {
         })
     }
     // Create the function which can parse the
-    fun parseJSON(jsonString: String) {
+    // fun parseJSON(jsonString: String) {
         // Create a JSONObject and pass the json string
-        val jsonObject = JSONObject(jsonString)
-        val jsonArray = jsonObject.getJSONArray("records")
-        println(jsonArray[0])
-        println(jsonArray[1])
+       // val jsonObject = JSONObject(jsonString)
+        // val jsonArray = jsonObject.getJSONArray("records")
+        // println(jsonArray[0])
+        // println(jsonArray[1])
         //WIP
 
-        for (spot in 0 until jsonArray.length()) {
-            print(spot)
+        // for (spot in 0 until jsonArray.length()) {
+           // print(spot)
 //            val id = spot.getString("id")
 //            val destination = jsonObject.getString("Destination")
 //            val geocode = jsonObject.getString("geocode")
@@ -133,6 +135,6 @@ class MainActivity : AppCompatActivity() {
 //            println("id: $id")
 //            println("destination: $destination")
 //            println("geocode: $geocode")
-        }
-    }
+        // }
+    // }
 }

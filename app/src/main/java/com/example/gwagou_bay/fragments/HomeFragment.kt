@@ -40,7 +40,7 @@ class HomeFragment (private val context : MainActivity) : Fragment() {
         // 2ieme spot pour test
         spotList.add(SpotModel())
 
-        println(spotList)
+        //println(spotList)
 
         // inflate injecte le layout du fragment    -    le ? permet d'afficher même si il n'y a pas de fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
