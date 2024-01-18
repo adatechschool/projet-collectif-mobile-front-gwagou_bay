@@ -22,6 +22,7 @@ import java.io.IOException;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response
+import org.json.JSONArray
 
 // Import pour accéder aux propriétés d'un objet JSON
 import org.json.JSONObject
@@ -100,12 +101,10 @@ class MainActivity : AppCompatActivity() {
                 // Handle successful response
 
                 val responseData = response.body.string()
-                println("coucou")
                 runOnUiThread {
                     // Update UI or perform other tasks with the response data
-                    println(responseData)
                     // if (responseData != null) {
-                       // parseJSON(responseData)
+                        parseJSON(responseData)
                     // }
                 }
 
@@ -116,13 +115,12 @@ class MainActivity : AppCompatActivity() {
         })
     }
     // Create the function which can parse the
-    // fun parseJSON(jsonString: String) {
+     fun parseJSON(jsonString: String) {
         // Create a JSONObject and pass the json string
-       // val jsonObject = JSONObject(jsonString)
-        // val jsonArray = jsonObject.getJSONArray("records")
-        // println(jsonArray[0])
-        // println(jsonArray[1])
-        //WIP
+        val jsonArray = JSONArray(jsonString)
+        println(jsonArray[0])
+            //jsonObject.getString("Name")
+
 
         // for (spot in 0 until jsonArray.length()) {
            // print(spot)
@@ -136,5 +134,5 @@ class MainActivity : AppCompatActivity() {
 //            println("destination: $destination")
 //            println("geocode: $geocode")
         // }
-    // }
+     }
 }
