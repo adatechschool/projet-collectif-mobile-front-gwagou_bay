@@ -14,7 +14,7 @@ import com.example.gwagou_bay.SpotModel
 
 class SpotAdapter (
     private val context : MainActivity,
-    private val spotList : List<SpotModel>, // récupére la liste des spots qui ont été créer dans le fichier dans HomeFragment.kt
+//    private val spotList : List<SpotModel>, // récupére la liste des spots qui ont été créer dans le fichier dans HomeFragment.kt
     private val layoutId: Int
 ): RecyclerView.Adapter<SpotAdapter.ViewHolder>(){
 
@@ -35,12 +35,12 @@ class SpotAdapter (
         return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int = spotList.size
+    override fun getItemCount(): Int = this.context.getSpotList().size
 
     // Fonction qui affiche les informations et l'image à partir de la liste des spots
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // récupérer les information du spot
-        val currentSpot = spotList[position]
+        val currentSpot = this.context.getSpotList()[position]
 
         //utilise Glide pour récupérer l'image à partir de son url pour avoir l'affichage sur le composant
         Glide.with(context).load(Uri.parse(currentSpot.imageUrl))

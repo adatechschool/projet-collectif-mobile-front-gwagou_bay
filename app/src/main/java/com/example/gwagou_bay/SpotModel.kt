@@ -5,7 +5,7 @@ class SpotModel (
     val spotCity : String = "Oahu",
     val spotGeocode : String = "ergtergregerg",
     val spotAddress : String = "Pipeline, Oahu, Hawaii",
-    val additionnalInformations : String = "dogs allowed",
+    val additionalInformation : String = "dogs allowed",
     val wavesTypes : String = "Reef break",
     val difficultyLevel : String = "4",
     val peakSurfSeasonStart : String = "July",
