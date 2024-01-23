@@ -11,6 +11,7 @@ import com.example.gwagou_bay.MainActivity
 import com.example.gwagou_bay.R
 import com.example.gwagou_bay.SpotModel
 import com.example.gwagou_bay.adapter.SpotAdapter
+import com.example.gwagou_bay.services.SpotListService
 
 // pour l'autocomplétion taper: oncreateview -> cliquer sur overide fun...
 class HomeFragment (private val context : MainActivity) : Fragment() {
@@ -19,8 +20,7 @@ class HomeFragment (private val context : MainActivity) : Fragment() {
         
       
 
-        //créer une liste qui va stocker les spots
-        val spotList = context.getSpotList()
+
 
 //        //enregistrer un premier spot dans notre liste (Pipeline)
 //        spotList.add(SpotModel(
@@ -40,7 +40,7 @@ class HomeFragment (private val context : MainActivity) : Fragment() {
 //        // 2ieme spot pour test
 //        spotList.add(SpotModel())
 
-        println("Dans homefragment, spotlist:" + spotList)
+        println("Dans homefragment, spotlist:")
 
         // inflate injecte le layout du fragment    -    le ? permet d'afficher même si il n'y a pas de fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)

@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.gwagou_bay.MainActivity
 import com.example.gwagou_bay.R
-import com.example.gwagou_bay.SpotModel
+import com.example.gwagou_bay.services.SpotListService
+
 
 class SpotAdapter (
     private val context : MainActivity,
@@ -35,11 +36,12 @@ class SpotAdapter (
         return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int = this.context.getSpotList().size
+    override fun getItemCount(): Int = 0//SpotListService().getSpotList().length()
 
     // Fonction qui affiche les informations et l'image à partir de la liste des spots
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        // récupérer les information du spot
+    }
+        /*// récupérer les information du spot
         val currentSpot = this.context.getSpotList()[position]
 
         //utilise Glide pour récupérer l'image à partir de son url pour avoir l'affichage sur le composant
@@ -58,5 +60,5 @@ class SpotAdapter (
         } else {
             holder.heartIcon.setImageResource(R.drawable.ic_unlike)
         }
-    }
+    }*/
 }

@@ -16,6 +16,11 @@ import com.example.gwagou_bay.fragments.AddSpotFragment
 import com.example.gwagou_bay.fragments.HomeFragment
 import com.example.gwagou_bay.fragments.SpotDetailsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.gwagou_bay.services.SpotListService
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 //Import pour requete API 
 import java.io.IOException;
@@ -30,11 +35,7 @@ import org.json.JSONObject
 
 
 class MainActivity : AppCompatActivity() {
-    private var spotList = arrayListOf<SpotModel>()
 
-    public fun getSpotList() : ArrayList<SpotModel> {  // déclaration d'une function sous la forme:   fun double(x: Int): Int {
-        return this.spotList
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,8 +59,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Call the function to make the GET request
-        makeGetRequest()
+        GlobalScope.launch {
+            loadData()
+        }
+
 
         // fragment qui s'ouvre au lancement de l'appli
         loadFragment(HomeFragment(this))
@@ -75,8 +78,13 @@ class MainActivity : AppCompatActivity() {
         transaction.commit() // envoie les changements
 
     }
+
+    private suspend fun loadData() = withContext(Dispatchers.Main){
+        //créer une liste qui va stocker les spots
+        val spotList = SpotListService().getSpotList()
+    }
     
-    //function pour appel API qui retourne les datas au format json
+    /*//function pour appel API qui retourne les datas au format json
     private fun makeGetRequest() {
         // Create an OkHttpClient instance
         val client = OkHttpClient()  // méthode qui renvoie une requête http
@@ -160,5 +168,5 @@ class MainActivity : AppCompatActivity() {
 
         }
         println(this.spotList)
-     }
+     }*/
 }
