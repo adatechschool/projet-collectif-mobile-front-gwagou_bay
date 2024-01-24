@@ -21,35 +21,6 @@ class FavouritesFragment (private val context : MainActivity) : Fragment() {
         //créer une liste qui va stocker les spots
         val spotList = arrayListOf<SpotModel>()
 
-        //enregistrer un premier spot dans notre liste (Pipeline)
-        spotList.add(SpotModel(
-            "Skeleton bay",
-            "Skeleton bay",
-            "eyJpIjoiU2tlbGV0b24gQmF5LCBOYW1pYmlhIiwibyI6eyJzdGF0dXMiOiJPSyIsImZvcm1hdHRlZEFkZHJlc3MiOiJOYW1pYmlhIiwibGF0IjotMjUuOTE0NDkxOSwibG5nIjoxNC45MDY4NTk...",
-            "Skeleton bay, Namibia",
-            "dogs allowed",
-            "Point break",
-            "5",
-            "september",
-            "december",
-            "https://cdn.pixabay.com/photo/2020/09/01/08/32/ocean-5534609_1280.jpg",
-            false
-        ))
-
-        // 2ieme spot pour test
-        spotList.add(SpotModel(
-            "Rockaway Beach",
-            "Tillamook",
-            "JpIjoiU2tlbGV0b24gQmF5LCBOYW1pYmlhIiwibyI6eyJzdGF0dXMiOiJPSyIsImZvcm1hdHRlZEFkZHJlc3MiOiJOYW1pYmlhIiwibGF0IjotMjUuOTE0NDkxOSwibG5nIjoxNC45MDY4NTk...",
-            "Tillamook, Oregon",
-            "dogs allowed",
-            "Beach break",
-            "1",
-            "august",
-            "october",
-            "https://ezrbr.com/wp-content/uploads/2023/08/Rockaway-Beach-Resort_web-07.jpg",
-            false
-        ))
 
         spotList.add(SpotModel(
             "Kitty Hawk",
