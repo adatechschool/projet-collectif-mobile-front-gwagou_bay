@@ -38,6 +38,34 @@ class HomeFragment (private val context : MainActivity) : Fragment() {
         ))
 
         // 2ieme spot pour test
+        spotList.add(SpotModel(
+            "Rockaway Beach",
+            "Tillamook",
+            "JpIjoiU2tlbGV0b24gQmF5LCBOYW1pYmlhIiwibyI6eyJzdGF0dXMiOiJPSyIsImZvcm1hdHRlZEFkZHJlc3MiOiJOYW1pYmlhIiwibGF0IjotMjUuOTE0NDkxOSwibG5nIjoxNC45MDY4NTk...",
+            "Tillamook, Oregon",
+            "dogs allowed",
+            "Beach break",
+            "1",
+            "august",
+            "october",
+            "https://ezrbr.com/wp-content/uploads/2023/08/Rockaway-Beach-Resort_web-07.jpg",
+            false
+        ))
+
+        spotList.add(SpotModel(
+            "Kitty Hawk",
+            "Kitty Hawk",
+            "U2tlbGV0b24gQmF5LCBOYW1pYmlhIiwibyI6eyJzdGF0dXMiOiJPSyIsImZvcm1hdHRlZEFkZHJlc3MiOiJOYW1pYmlhIiwibGF0IjotMjUuOTE0NDkxOSwibG5nIjoxNC45MDY4NTk...",
+            "Kitty Hawk, North Carolina",
+            "dogs allowed",
+            "Outer Banks",
+            "3",
+            "august",
+            "october",
+            "https://spot-thumbnails.cdn-surfline.com/spots/5842041f4e65fad6a7708863/5842041f4e65fad6a7708863_1500.jpg",
+            true
+        ))
+
         spotList.add(SpotModel())
 
         //println(spotList)
