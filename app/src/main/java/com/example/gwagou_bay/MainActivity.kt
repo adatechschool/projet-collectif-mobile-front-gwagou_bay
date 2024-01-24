@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.gwagou_bay.databinding.ActivityMainBinding
 import com.example.gwagou_bay.fragments.AddSpotFragment
+import com.example.gwagou_bay.fragments.FavouritesFragment
 import com.example.gwagou_bay.fragments.HomeFragment
 import com.example.gwagou_bay.fragments.SpotDetailsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -44,8 +45,12 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(AddSpotFragment(this))
                     return@setOnItemSelectedListener true
                 }
-                R.id.settings_page -> {
-                    loadFragment(SpotDetailsFragment(this))
+                R.id.home_page -> {
+                    loadFragment(HomeFragment(this))
+                    return@setOnItemSelectedListener true
+                }
+                R.id.favourites_page -> {
+                    loadFragment(FavouritesFragment(this))
                     return@setOnItemSelectedListener true
                 }
 

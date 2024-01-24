@@ -4,12 +4,15 @@
     <string name="user_greetings_subtitle">Enjoy your surfing</string>
 
     <string name="bottom_search_item">Search</string>
-    <string name="bottom_favorites_item">Favorites</string>
+    <string name="bottom_favourites_item">Favourites</string>
     <string name="bottom_add_spot_item">Add a new spot</string>
-    <string name="bottom_settings_item">Settings</string>
+    <string name="bottom_home_item">Home</string>
 
     <!-- Page d'accueil -->
     <string name="home_page_title">Popular spots</string>
+
+    <!-- Favoris -->
+    <string name="favourites_page_title">Favourite spots</string>
 
     <!-- Détails d'un spot -->
     <string name="spot_name">Spot name</string>

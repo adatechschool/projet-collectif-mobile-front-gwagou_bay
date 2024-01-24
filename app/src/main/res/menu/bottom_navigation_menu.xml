@@ -2,15 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/favorites_page"
-        android:title="@string/bottom_favorites_item"
+        android:id="@+id/home_page"
+        android:title="@string/bottom_home_item"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/favourites_page"
+        android:title="@string/bottom_favourites_item"
         android:icon="@drawable/ic_heart"/>
     <item
         android:id="@+id/add_spot_page"
         android:title="@string/bottom_add_spot_item"
         android:icon="@drawable/ic_add"/>
-    <item
-        android:id="@+id/settings_page"
-        android:title="@string/bottom_settings_item"
-        android:icon="@drawable/ic_settings"/>
+
 </menu>
